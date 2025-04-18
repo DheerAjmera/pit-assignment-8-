@@ -64,4 +64,15 @@ public class StudentOperations {
         throw new StudentNotFoundException("Student with name \"" + name + "\" not found.");
     }
 
+    // Method to update an existing student's information
+    public boolean updateStudent(int prn, String name, String branch, String batch, float cgpa) throws StudentNotFoundException {
+        Student s = searchByPRN(prn); // Find student by PRN
+        // Update student's details
+        s.setName(name);
+        s.setBranch(branch);
+        s.setBatch(batch);
+        s.setCGPA(cgpa);
+        return true;
+    }
+
     
