@@ -75,4 +75,11 @@ public class StudentOperations {
         return true;
     }
 
+    // Method to delete a student by PRN
+    public boolean deleteStudent(int prn) throws StudentNotFoundException {
+        Student s = searchByPRN(prn); // Find student by PRN
+        students.remove(s); // Remove student from the list
+        return true;
+    }
+}
     
