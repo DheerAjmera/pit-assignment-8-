@@ -31,3 +31,9 @@ public class Student {
     public void setBatch(String batch) { this.batch = batch; }
     public void setCGPA(float cgpa) { this.cgpa = cgpa; }
 
+    // Display method to print student details
+    public void display() {
+        System.out.println("Name: " + name + " | PRN: " + prn + " | Branch: " + branch + " | Batch: " + batch + " | CGPA: " + cgpa);
+    }
+}
+
