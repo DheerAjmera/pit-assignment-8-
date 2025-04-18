@@ -20,3 +20,16 @@ public class StudentOperations {
         // If no duplicate, add student to the list
         students.add(student);
     }
+
+    // Method to display all students
+    public void displayStudents() {
+        if (students.isEmpty()) {
+            // If no student records exist
+            System.out.println("No student records found.");
+        } else {
+            // Loop through and display each student
+            for (Student s : students) {
+                s.display();
+            }
+        }
+    }
