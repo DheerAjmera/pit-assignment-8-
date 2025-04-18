@@ -33,3 +33,14 @@ public class StudentOperations {
             }
         }
     }
+
+        // Method to search student by PRN
+    public Student searchByPRN(int prn) throws StudentNotFoundException {
+        for (Student s : students) {
+            if (s.getPRN() == prn) {
+                return s; // Return student if PRN matches
+            }
+        }
+        // Throw exception if student not found
+        throw new StudentNotFoundException("Student with PRN " + prn + " not found.");
+    }
